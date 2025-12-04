@@ -487,6 +487,7 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
+
 cc_prebuilt_library_shared {
     name: "HEVCSecureVdecCA_510",
     owner: "tecno",
@@ -614,6 +615,32 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libnbaio_mono",
                 "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+
+cc_prebuilt_library_shared {
+    name: "libTransNS",
+    owner: "tecno",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libTransNS.so",
+            ],
+            shared_libs: [
+                "liblog",
                 "libc",
                 "libm",
                 "libdl",
@@ -772,7 +799,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libalsautils",
+    name: "libalsautils.mt6833",
     owner: "tecno",
     strip: {
         none: true,
@@ -780,7 +807,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libalsautils.so",
+                "proprietary/vendor/lib/libalsautils.mt6833.so",
             ],
             shared_libs: [
                 "libaudioutils",
@@ -18308,12 +18335,62 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libgz_uree",
+    owner: "tecno",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libgz_uree.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libgz_uree.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libgz_gp_client",
     owner: "tecno",
     strip: {
         none: true,
     },
     target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libgz_gp_client.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libgz_uree",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libgz_gp_client.so",
@@ -18328,32 +18405,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgz_uree",
-    owner: "tecno",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgz_uree.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
+    compile_multilib: "both",
     prefer: true,
     soc_specific: true,
 }

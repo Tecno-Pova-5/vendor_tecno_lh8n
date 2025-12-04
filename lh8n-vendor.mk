@@ -331,7 +331,8 @@ PRODUCT_PACKAGES += \
     libMtkSpeechEnh \
     lib_iir \
     lib_speech_enh \
-    libalsautils \
+    libalsautils.mt6833 \
+    libTransNS \
     libaudio_param_parser-vnd \
     libaudiocompensationfilter_vendor \
     libaudiocompensationfilterc \
