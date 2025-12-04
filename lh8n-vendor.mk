@@ -353,6 +353,7 @@ PRODUCT_PACKAGES += \
     libmtklimiter_vendor \
     libmtkshifter_vendor \
     libnvram \
+    libtranlog \
     libnxp_extamp_intf \
     libspeech_enh_lib \
     libspeechparser_vendor \
