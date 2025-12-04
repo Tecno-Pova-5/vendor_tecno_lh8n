@@ -333,6 +333,7 @@ PRODUCT_PACKAGES += \
     lib_speech_enh \
     libalsautils.mt6833 \
     libTransNS \
+    libvcodecdrv_v3a \
     libaudio_param_parser-vnd \
     libaudiocompensationfilter_vendor \
     libaudiocompensationfilterc \

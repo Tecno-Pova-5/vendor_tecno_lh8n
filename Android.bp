@@ -1679,6 +1679,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libvcodecdrv_v3a",
+    owner: "tecno",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libvcodecdrv_v3a.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libvcodec_utility_v3a",
+                "libvcodec_oal",
+                "libmtk_drvb",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.audio@7.1",
     owner: "tecno",
     strip: {
