@@ -26265,6 +26265,7 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    allow_undefined_symbols: true,
     soc_specific: true,
 }
 
