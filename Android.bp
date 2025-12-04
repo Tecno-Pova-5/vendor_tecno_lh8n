@@ -1570,36 +1570,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvcodecdrv",
-    owner: "tecno",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libvcodecdrv.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libvcodec_utility",
-                "libvcodec_oal",
-                "libmtk_drvb",
-                "libion",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libvcodecdrv_header_stub",
     owner: "tecno",
     strip: {
@@ -1639,36 +1609,6 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "liblog",
                 "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libvpud_vcodec",
-    owner: "tecno",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libvpud_vcodec.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libvcodecdrv",
-                "libvcodec_utility",
-                "liblog",
-                "libion",
-                "libion_mtk",
                 "libc++",
                 "libc",
                 "libm",

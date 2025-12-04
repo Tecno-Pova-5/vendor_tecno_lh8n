@@ -359,10 +359,8 @@ PRODUCT_PACKAGES += \
     libspeechparser_vendor \
     libvcodec_oal \
     libvcodec_utility_v3a \
-    libvcodecdrv \
     libvcodecdrv_header_stub \
     libvpu5 \
-    libvpud_vcodec \
     libvpudv3a_vcodec \
     vendor.mediatek.hardware.audio@7.1 \
     vendor.mediatek.hardware.bluetooth.audio@2.1 \
