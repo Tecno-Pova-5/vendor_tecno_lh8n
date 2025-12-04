@@ -1971,7 +1971,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
+        android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/egl/libGLES_mali.so",
             ],
@@ -2003,7 +2003,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "64",
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
@@ -2016,7 +2016,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
+        android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/egl/libGLES_meow.so",
             ],
@@ -2033,7 +2033,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "64",
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
@@ -2046,7 +2046,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
+        android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/egl/libMEOW_data.so",
             ],
@@ -2057,7 +2057,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "64",
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
@@ -2070,7 +2070,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
+        android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/egl/libMEOW_gift.so",
             ],
@@ -2090,7 +2090,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "64",
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
@@ -2103,7 +2103,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
+        android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/egl/libMEOW_qt.so",
             ],
@@ -2120,7 +2120,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "64",
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
@@ -2133,7 +2133,7 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
+        android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/egl/libMEOW_trace.so",
             ],
@@ -2150,7 +2150,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "64",
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
