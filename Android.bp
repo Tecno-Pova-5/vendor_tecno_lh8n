@@ -394,6 +394,7 @@ cc_prebuilt_library_shared {
                 "libdl",
             ],
         },
+
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libnvram_sec.so",
@@ -1392,8 +1393,24 @@ cc_prebuilt_library_shared {
                 "libdl",
             ],
         },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libnvram.so",
+            ],
+            shared_libs: [
+                "libbase_shim",
+                "libcutils",
+                "libbase",
+                "liblog",
+                "libnvram_sec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     prefer: true,
     soc_specific: true,
 }
@@ -1413,39 +1430,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "libtinyalsa",
-                "liblog",
-                "libnvram",
-                "libcrypto",
-                "libssl",
-                "libfile_op",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "librt_extamp_intf",
-    owner: "tecno",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/librt_extamp_intf.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "libtinyalsa",
-                "libtinyxml2",
                 "liblog",
                 "libnvram",
                 "libcrypto",
