@@ -1224,8 +1224,19 @@ cc_prebuilt_library_shared {
                 "libm",
             ],
         },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcustom_nvram.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     prefer: true,
     soc_specific: true,
 }
