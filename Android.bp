@@ -1998,6 +1998,7 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     relative_install_path: "egl",
     prefer: true,
+    allow_undefined_symbols: true,
     soc_specific: true,
 }
 
